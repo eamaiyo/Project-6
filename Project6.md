@@ -95,7 +95,7 @@ ssh to ec2 instance for wordPress web Server
 ![Fstab-WebServer-Blkid](./Image-6/Fstab-WebServer-Blkid-1.PNG)
 
 `sudo vi /etc/fstab` --(Using vi text editor to update /etc/fstab configuration file in this format using my own UUID)
-![Fstab-Updated-ConfigFile](./Image-6/Fstab-Updated-ConfigFile-2.PNG)
+![Fstab-WevServer-UpdatedConfigFile](./Image-6/Fstab-WevServer-UpdatedConfigFile-2.PNG)
 
 `sudo mount -a` --(Run command to validate edited /etc/fstab config file was successful and returned no error)
 ![Fstab-WebServer-ConfigFile-Validate](./Image-6/Fstab-WebServer-ConfigFile-Validate-3.PNG)
