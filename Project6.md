@@ -98,7 +98,7 @@ ssh to ec2 instance for wordPress web Server
 ![Fstab-Updated-ConfigFile](./Image-6/Fstab-Updated-ConfigFile-2.PNG)
 
 `sudo mount -a` --(Run command to validate edited /etc/fstab config file was successful and returned no error)
-![Fstab-WebServer-ConfigFile-Validate](.Image-6/Fstab-WebServer-ConfigFile-Validate-3.PNG)
+![Fstab-WebServer-ConfigFile-Validate](./Image-6/Fstab-WebServer-ConfigFile-Validate-3.PNG)
 
 `sudo systemctl daemon-reload`;`df -h` --(Restart system 1. To test configuration and reload the  daenom and 2. Run  seconf command to list the persistent mount device for WordPress Web Server)
 ![Fstab-WebServer-System-DaemonReload](./Image-6/Fstab-WebServer-System-DaemonReload-4.PNG)
@@ -148,7 +148,7 @@ ssh to ec2 instance for wordPress web Server
 ![DbServer-Display-DbLv](./Image-6/DbServer-Display-DbLv-13.PNG
 
 `sudo mkdir /db`; `sudo mkfs.ext4 /dev/database-vg/db-lv`--(Creating 1. A new database directory 'db' and 2. Adding devices within directory '/dev/database-vg/db-lv' logical volume'db-lv' to filesystem).
-![DbServer-AddFileSystem-DbLv](.Image-6/DbServer-AddFileSystem-DbLv-14.PNG)
+![DbServer-AddFileSystem-DbLv](./Image-6/DbServer-AddFileSystem-DbLv-14.PNG)
 
 `sudo mount /dev/database-vg/db-lv /db`--(Mounting '/dev/database-vg/db-lv' on 'db-lv' logical volume)
 ![DbServer-MountDbLV-DBDir](./Image-6/DbServer-MountDbLV-DBDir-15.PNG)
@@ -186,10 +186,10 @@ ssh to ec2 instance for wordPress web Server
 ## To install PHP and it’s depemdencies
 
 `subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms` --(Enable codeready builder repository for our RHEL system by utilizing subscription-manager)
-![WordPress-Enable-CodeReady-SubcriptMgr](./Image-6/WordPress-Enable-CodeReady-SubcriptMgr-4a.PNG)
+![WordPress-Enable-CodeReady-SubcriptMgr](./Image-6/WordPress-Enable-CodeReady-SubcriptMgr-4.PNG)
 
 `sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y` --(Install Epel rhel-9 repository. To install latest version of PHP as prior knowlegde Wordpress would only work with latest configuration of PHP especially Redhat enterprise Linux)
-![WordPress-Install-EpelRepo-Rhel](./Image-6/WordPress-Install-EpelRepo-Rhel.v9-5.PNG)
+![WordPress-Install-EpelRepo-Rhel](./Image-6/WordPress-Install-EpelRepo-Rhel-5.PNG)
 
 `sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y` --(Install Remi rhel-9 repository)
 ![WordPress-Install-RemiRepo-Rhel](./Image-6/WordPress-Install-RemiRepo-Rhel-6.PNG)
@@ -241,7 +241,7 @@ ssh to ec2 instance for wordPress web Server
 ![Mysql-Create-UserPassword](./Image-6/Mysql-Create-UserPassword-4.PNG)
 
 `create databases evezi_db`; `show databases` --(Create user and password for my database, given prompt to provide password)
-![Create-Db-ShowDb](.Project-6/Image-6/Mysql-Create-Db-ShowDb-5.PNG)
+![Mysql-Create-Db-ShowDb](./Image-6/Mysql-Create-Db-ShowDb-5.PNG)
 
 `grant all on evezi_db.* to 'evezi_user'@'%' with grant option;`; `Flush privileges;` --(Grant all privileges on the database to the specified user at all trafic at specific IP address)
 ![Mysql-GrantPrivileges-Db](./Image-6/Mysql-GrantPrivileges-Db-6.PNG)
